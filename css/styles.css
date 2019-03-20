@@ -1,0 +1,246 @@
+html,
+
+/*Global*/
+
+body{
+	margin:0px;
+	padding: 0px;
+	font-family: Arial, sans-serif;
+	line-height: 1.5;
+}
+
+.container{
+	margin:0px auto;
+	width: 80%;
+}
+
+section{
+	height: 500px;
+	background-color: #d64a4a;
+	position: relative;
+	
+	
+
+}
+
+
+
+.mask{
+	width: 150%;
+	height: 70px;
+	overflow: hidden;
+
+}
+
+.anim_text{
+	opacity: 0;
+	font-size:74px;
+	font-weight:bold;
+	color: #fff;
+	line-height: 1;
+	animation: txt_anim 2s cubic-bezier(0, .13, .04, 1) ;
+	animation-fill-mode: forwards;
+	
+
+	
+}
+
+.anim_text1{
+	opacity: 0;
+	font-size:74px;
+	font-weight:bold;
+	color: #fff;
+	line-height: 1;
+	animation: txt_anim 2s cubic-bezier(0, .13, .04, 1) ;
+	animation-delay: .1s;
+	animation-fill-mode: forwards;
+	
+}
+
+.anim_text2{
+	opacity: 0;
+	font-size:74px;
+	font-weight:bold;
+	color: #fff;
+	line-height: 1;
+	animation: txt_anim 2s cubic-bezier(0, .13, .04, 1);
+	animation-delay: .19s;
+	animation-fill-mode: forwards;
+
+	
+}
+
+.text_holder{
+	position: absolute;
+	left:40%;
+	top: 40%;
+	
+	transform: translate(-40%,-40%);	
+	animation: mograph .5s cubic-bezier(0, .13, .04, 1) ;
+	animation-delay:1.6s;
+	animation-fill-mode:forwards;
+	
+	
+}
+
+.trimpath_holder{
+	position: absolute;
+
+	left: 30%;
+	top:  24%;
+
+}
+
+
+
+.sub_text{
+	color: white;
+	font-size:18px ;
+	animation:txt_sub 2s cubic-bezier(0, .13, .04, 1); 
+	fill: white;
+	animation-fill-mode:forwards;
+	
+	
+	
+	
+	/*animation: s_anim 3.5s ease-in-out;*/
+}
+
+hr{
+	animation:txt_sub 2s cubic-bezier(0, .13, .04, 1); 
+	animation-fill-mode:forwards;
+}
+
+path{
+	stroke: white;
+	stroke-width:3;
+	opacity: 0;
+	
+	animation:trimpath 1s;
+	animation-delay: 1.43s;
+	animation-fill-mode: fowards;
+}
+
+text{
+	animation:txt 1.5s cubic-bezier(0, .13, .04, 1); 
+
+
+}
+
+
+	
+
+
+@keyframes txt_anim{
+	0%{
+		transform: translateY(100%);
+		opacity: 0;
+		
+	}
+	15%{
+		transform: translateY(100%);
+		opacity: 1;
+		
+	}
+	50%{
+		transform: translateY(0%);
+		opacity: 1;
+		
+	}
+	75%{
+		transform: translateY(0%);
+		opacity: 1;
+		
+	}
+	100%{
+			transform: translate(10%,0%);
+		opacity: 1;
+
+	}
+}
+
+
+@keyframes mograph{
+
+	from{
+		transform: translate(-40%,-40%);
+		
+	}
+	to{
+		
+		transform: translate(-30%,-40%);
+
+		
+	}
+}
+
+@keyframes s_anim{
+
+	from{
+
+		stroke-dasharray: 100;
+	stroke-dashoffset:100;
+	
+	fill: rgba(255,255,255,0);
+
+	}
+	to{
+		
+		stroke-dashoffset: 0;
+
+		fill: rgba(255,255,255,0);
+}
+
+} 
+
+@keyframes trimpath {
+	from{
+		transform: translateX(-100%);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(100%);
+	}
+}
+
+@keyframes txt_sub {0%{
+		transform: translateY(0%);
+		
+		
+	}
+	15%{
+		transform: translateY(0%);
+		
+	}
+	50%{
+		transform: translateY(0%);
+		
+		
+	}
+	75%{
+		transform: translateY(0%);
+		
+	}
+	100%{
+			transform: translate(16%,0%);
+		
+
+	}
+
+}
+
+@keyframes txt {
+	0%{
+		transform: translateY(-100%);
+		
+		
+	}
+	
+	100%{
+			transform: translateY(0%);
+		
+
+	}
+
+
+}
